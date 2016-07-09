@@ -1,0 +1,34 @@
+api_album_get_all:
+    path: /album
+    defaults: { _controller: AlbumGalleryBundle:Album:getAll }
+    methods:  [GET]
+
+api_album_get_by_id:
+    path: /album/{album_id}
+    defaults: { _controller: AlbumGalleryBundle:Album:getById }
+    methods:  [GET]
+
+api_album_get_images:
+    path: /album/{album_id}/images/{page}
+    defaults: { _controller: AlbumGalleryBundle:Album:getImages }
+    methods:  [GET]
+
+api_album_new:
+    path: /album
+    defaults: { _controller: AlbumGalleryBundle:Album:new }
+    methods:  [PUT]
+
+api_album_delete:
+    path: /album/{album_id}
+    defaults: { _controller: AlbumGalleryBundle:Album:delete }
+    methods:  [DELETE]
+
+api_album_new_image:
+    path: /album/{album_id}/images
+    defaults: { _controller: AlbumGalleryBundle:Album:newImage }
+    methods:  [PUT]
+
+api_album_delete_image:
+    path: /album/{album_id}/images/{image_id}
+    defaults: { _controller: AlbumGalleryBundle:Album:deleteImage }
+    methods:  [DELETE]

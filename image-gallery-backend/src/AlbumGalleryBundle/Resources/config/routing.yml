@@ -1,0 +1,2 @@
+api_album:
+    resource: "@AlbumGalleryBundle/Resources/config/routing/album.yml"

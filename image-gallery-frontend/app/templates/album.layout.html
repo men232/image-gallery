@@ -1,0 +1,23 @@
+<h4>Title: <%- title %></h4>
+<small>Description: <%- description %></small>
+<hr/>
+
+<span>Page <%- images.pagination %> of <%- Math.ceil(count / images.showPrePage) %></span>
+
+<div class="row album-images">
+	List of images
+</div>
+<hr>
+<div class="row">
+	<% if (images.pagination > 1) { %>
+		<a href="#/album/<%- id %>/page/<%- images.pagination-1 %>" class="btn btn-info">Prev</a>
+	<% } else { %>
+		<a disabled class="btn btn-info">Prev</a>
+	<% } %>
+
+	<% if (images.pagination < Math.ceil(count / images.showPrePage)) { %>
+		<a href="#/album/<%- id %>/page/<%- images.pagination+1 %>" class="btn btn-info">Next</a>
+	<% } else { %>
+		<a disabled class="btn btn-info">Next</a>
+	<% } %>
+</div>

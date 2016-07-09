@@ -1,0 +1,3 @@
+api_album:
+    resource: "@AlbumGalleryBundle/Resources/config/routing.yml"
+    prefix: /api

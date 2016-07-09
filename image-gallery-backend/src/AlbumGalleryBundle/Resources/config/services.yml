@@ -1,0 +1,4 @@
+services:
+    album_gallery.api_manager:
+        class: AlbumGalleryBundle\ApiManager
+        arguments: ['@service_container']

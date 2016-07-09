@@ -1,0 +1,60 @@
+AlbumGalleryBundle\Entity\Album:
+    properties:
+       title:
+          - NotBlank:
+             message: "'title' should not be blank."
+          - Type:
+             type: string
+             message: The value {{ value }} is not a valid {{ type }}.
+          - Length:
+             min: 3
+             max: 56
+             minMessage: "'title' must be at least {{ limit }} characters long."
+             maxMessage: "'title' cannot be longer than {{ limit }} characters long."
+       description:
+          - NotBlank:
+             message: "'description' should not be blank."
+          - Type:
+             type: string
+             message: The value {{ value }} is not a valid {{ type }}.
+          - Length:
+             min: 5
+             max: 250
+             minMessage: "'description' must be at least {{ limit }} characters long."
+             maxMessage: "'description' cannot be longer than {{ limit }} characters long."
+
+AlbumGalleryBundle\Entity\Image:
+    properties:
+       title:
+          - NotBlank:
+             message: "'title' should not be blank."
+          - Type:
+             type: string
+             message: The value {{ value }} is not a valid {{ type }}.
+          - Length:
+             min: 3
+             max: 56
+             minMessage: "'title' must be at least {{ limit }} characters long."
+             maxMessage: "'title' cannot be longer than {{ limit }} characters long."
+       description:
+          - NotBlank:
+             message: "'description' should not be blank."
+          - Type:
+             type: string
+             message: The value {{ value }} is not a valid {{ type }}.
+          - Length:
+             min: 5
+             max: 250
+             minMessage: "'description' must be at least {{ limit }} characters long."
+             maxMessage: "'description' cannot be longer than {{ limit }} characters long."
+       imgUrl:
+          - NotBlank:
+             message: "'imgUrl' should not be blank."
+          - Type:
+             type: string
+             message: The value {{ value }} is not a valid {{ type }}.
+          - Length:
+             min: 5
+             max: 250
+             minMessage: "'imgUrl' must be at least {{ limit }} characters long."
+             maxMessage: "'imgUrl' cannot be longer than {{ limit }} characters long."
