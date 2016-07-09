@@ -14,12 +14,7 @@ class ApiManager
 	const ERROR_UNKNOWN              = 1;
 	const ERROR_UNKNOW_API_METHOD    = 2;
 	const ERROR_ACCESS_DENIED        = 3;
-	const ERROR_INCORRECT_SIGNATURE  = 4;
-	const ERROR_SESSION_NOT_EXIST    = 5;
-	const ERROR_INCORRECT_TOKEN      = 6;
-	const ERROR_SESSION_HAS_EXPIRED  = 7;
-	const ERROR_MARKET_NOT_EXIST     = 8;
-	
+
 	protected $credits;
 	protected $container;
 
@@ -63,9 +58,6 @@ class ApiManager
 
 		$jsonResponse = new JsonResponse();
 		$jsonResponse->setContent($response);
-		$jsonResponse->headers->set('Access-Control-Allow-Origin', '*');
-		$jsonResponse->headers->set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-		$jsonResponse->headers->set('Access-Control-Allow-Headers', 'origin, content-type, accept');
 
 		return $jsonResponse;
 	}
